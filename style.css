@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    background-image: url("images/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg");
+    background-size: cover;
+  }
+
+.header{
+    background:#2b3f53;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid #fff;
+  }
+
+  h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 370px;
+    margin-right: 370px;
+
+}  
+
+.underline {
+  border-bottom: 2px solid white;
+}
+
+p{
+  font-size: 16px;
+}
+
+/* Pseudo elements*/
+/* First letter - Selects the first letter of each element*/
+h1::first-letter{
+  color: #2b3f53;
+  font-size: 60px;
+  background-color:darkcyan;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid white;
+  line-height: 5px;
+}
+
+/* Selects the first line of each selector element*/
+p::first-line {
+  color: #fff;
+  font-variant: large-caps;
+  font-size: 20px;
+  background-color: red;
+  word-spacing: 1em;
+  letter-spacing: 0.5em;
+  text-decoration: darkcyan solid underline;
+}
+
+/* ::before : ♦ before the content of each element*/
+p::before{
+  content: "♦";
+}
+
+/*::after  : ♦ after the content of each element*/
+p::after{
+  content: "♦";
+}
+
+/* ::Placeholder: 
+Style the placeholder text in an 
+<input> or <textarea> form element. */
+::placeholder{
+  color: darkorange;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.placeholder{
+  margin-top: 25px;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.btn {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: darkcyan;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition-timing-function: ease-out;
+  transition-duration: 3s;
+}
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover{
+  background-color: darkorange;
+}
+
+/* TRANSITIONS */
+ /* Transition text box - ease-in-out - Slow start */
+ .txt{
+  border: 2px solid white;
+  font-family:'Courier New', Courier, monospace;
+  font-size:small;
+  text-align: center;
+  color: white;
+  background: #2b3f53;
+  padding: 50px 60px 50px 60px; /* Top, right, bottom, left */
+  margin: 15px;
+  margin-right: 400px;
+  margin-left: 400px;
+  transition-timing-function: ease-out;
+  transition-duration: 3s;
+}
+
+/* Translate value moves an element left/right and up/down.*/
+/* Square left down*/
+.square1 {
+  background: #2b3f53;
+  border-radius: 3px;
+  height: 150px;
+  margin: 100px;
+  position: absolute;
+  transition: transform 0.8s;
+  width: 150px;
+  border: 2px solid white;
+}
+
+/* Square left up*/
+.square2 {
+  background: darkorange;
+  border-radius: 3px;
+  height: 150px;
+  transition: transform 0.8s;
+  position: absolute;
+  width: 150px;
+  border: 2px solid white;
+}
+/* Square right down*/
+.square3 {
+  background: #00aa9d;
+  border-radius: 3px;
+  height: 150px;
+  margin: 100px;
+  position: absolute;
+  transition: transform 0.8s;
+  width: 150px;
+  right: 0px;
+  border: 2px solid white;
+}
+/* Square right up*/
+.square4 {
+  background: #2b3f53;
+  border-radius: 3px;
+  height: 150px;
+  position: absolute;
+  transition: transform 0.8s;
+  width: 150px;
+  right: 0px;
+  border: 2px solid white;
+}
+/* Square left down*/
+.square1:hover {
+  transform: translate(20px, 20px); /*  20 pixels to the right and 20 pixels down*/
+}
+/* Square left up*/
+.square2:hover {
+  transform: translate(20px, 20px);
+}
+/* Square right down*/
+.square3:hover {
+  transform: translate(-20px, -20px);
+}
+/* Square right up*/
+.square4:hover {
+  transform: translate(-20px, -20px);
+
+}
+
+/*With the rotate value, 
+the element rotates clockwise or counterclockwise 
+by a specified number of degrees. */
+.droplet1 {
+  background: darkcyan;
+  border-radius: 2% 50%;
+  height: 100px;
+  width: 100px;
+  margin: 150px;
+  transition: all 3s;
+  transition-timing-function: ease-in-out;
+  border: 2px dotted white;
+  position: absolute;
+  left: 20px;
+}
+  
+.droplet1:hover {
+  transform: rotate(1080deg);
+  }
+
+.droplet2 {
+  background: darkorange;
+  border-radius: 2% 50%;
+  height: 50px;
+  margin: 150px;
+  transition: all 3s;
+  transition-timing-function: ease-in-out;
+  width: 50px;
+  border: 2px dotted white;
+  position: absolute;
+  left: 20px;
+  }
+    
+.droplet2:hover {
+  transform: rotate(-1080deg);
+  }
+
+.droplet3 {
+  background: #2b3f53;
+  border-radius: 50% 2%;
+  height: 100px;
+  width: 100px;
+  margin: 150px;
+  transition: all 3s;
+ transition-timing-function: ease-in-out;
+  border: 2px dotted white;
+  position: absolute;
+  right: 20px;
+  
+}
+    
+.droplet3:hover {
+  transform: rotate(1080deg);
+}
+  
+.droplet4 {
+  background: darkorange;
+  border-radius: 50% 2%;
+  height: 50px;
+  margin: 150px;
+  transition: all 3s;
+  transition-timing-function: ease-in-out;
+  width: 50px;
+  border: 2px dotted white;
+  position: absolute;
+  right: 20px;
+}
+      
+  .droplet4:hover {
+    transform: rotate(-1080deg);    
+}
+    
